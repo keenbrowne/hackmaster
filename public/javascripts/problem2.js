@@ -1,14 +1,16 @@
 $.extend(hack, {
-	success: function(consoleLog) {
+	intro: "Looping through",
+	problem: "print 1 through 100",
+	success: function(consoleLog, ret) {
 		expected = function() {
-			var output;
-			for(var i = 0; i< 100; i++) {
-				output += i + "\n"
+			var output = [];
+			for(var i = 1; i<= 100; i++) {
+				output.push(i);
 			}
+			return output;
 		}();
 		
-		if (consoleLog === expected) {
-			//alert('yay');
+		if (consoleLog.compareArrays(expected)) {
 			return true;
 		} else {
 			return false;

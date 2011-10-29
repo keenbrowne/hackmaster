@@ -20,7 +20,7 @@ var toNextAction = function(){
 	$('#text p:last').hide().fadeIn('slow');
 	if(next_step == stories.length - 1 && next_text_step == text_arr.length - 1){
 		// go to the game
-		$('#next input').show();
+		$('#next a').show();
 		//alert("go to the game");
 	}else{
 		if(text_arr.length <= ++next_text_step){
@@ -34,10 +34,6 @@ var toNextAction = function(){
 $(function(){
 	//alert($('#hidden').attr('tag'));
 	stories = eval($('#hidden').attr('tag'));
-	var level = stories[0].story.level;
+	var level = $('hidden_level_id').attr('tag');
 	toNextAction();
-	
-	$('#next input').click(function(){
-		window.location.href = "../games/"+level;
-	});
 });

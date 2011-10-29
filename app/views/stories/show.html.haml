@@ -1,12 +1,14 @@
 = javascript_include_tag "story.js"
 #hidden{:tag => @stories_json}
+
 #content
+	%h2="第#{@stories[0].level}章"
 	#left
-		= image_tag @stories[0].image, :class => "outline", :width => "640px", :id => "image"
+		= image_tag @stories[0].image, :width => "640px", :id => "image"
 	#right
-		#text.outline
+		#text
 		#next
-			%input.btn.primary.right{:type => "button", :value => "Go on", :style => "display:none"}
+			.right=link_to "开始编程!", "/games/#{@level_id}", :class => "btn primary", :style => "display:none"
 	
 :css
 	.left {

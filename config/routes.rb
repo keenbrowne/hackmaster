@@ -3,9 +3,8 @@ Hackmaster::Application.routes.draw do
   resources :stories
 
   resources :games
-
-  resources :game
-  resources :story
+  root :to => "game#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +54,7 @@ Hackmaster::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "game#index"
+
 
   # See how all your routes lay out with "rake routes"
 
