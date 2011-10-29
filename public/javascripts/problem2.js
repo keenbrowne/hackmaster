@@ -1,18 +1,17 @@
 $.extend(hack, {
-	intro: "Looping through",
-	problem: "print 1 through 100",
-	success: function(consoleLog, ret) {
-		expected = function() {
-			var output = [];
-			for(var i = 1; i<= 100; i++) {
-				output.push(i);
-			}
-			return output;
-		}();
-		
-		if (consoleLog.compareArrays(expected)) {
+	intro: "2. Heart Strings",
+	problem: "Tell me your name, in the form of a String",
+	example: '"Hello World" //you define a String like this\n"Jack" //Strings can be used to represent names',
+	success: function(consoleLog, ret) {		
+		if (typeof(ret) == "string") {			
 			return true;
 		} else {
+			$('#feedback').append(
+				$("<p/>").text("expected " + expected)
+			);
+			$('#feedback').append(
+				$("<p/>").text("actual " + consoleLog)
+			);
 			return false;
 		}
 	}
