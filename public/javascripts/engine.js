@@ -80,8 +80,8 @@ $(document).ready(function() {
 				$("<p/>").text("Success.")
 			);
 			
-			smoke.signal("You got it! Onto the next problem!", 1500);
-			setTimeout(advance, 1500);
+			smoke.signal("You got it! Onto the next problem!", 2250);
+			setTimeout(advance, 2250);
 			
 			consoleLog = null;
 		}
