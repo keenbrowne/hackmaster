@@ -8,13 +8,13 @@
 	#left
 		#intro.outline
 		#problem.outline
+		#example.outline
+			#example_screen
 		#console.outline
 			#computer_screen
 				%textarea#editor
 			.clearfix
-			%input#compile.btn.primary.right{:type => "button", :value => "编译"}
-		#feedback
-			feedback
+			%input#compile.btn.primary.right{:type => "button", :value => "提交"}
 	#right
 		#score.outline
 			#blurb="you are now level #{@level_id}, #{@blurb}"
