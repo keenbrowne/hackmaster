@@ -26,7 +26,7 @@ var advance = function() {
 
 var hack = {
 	handleSyntaxError: function(e) {
-		$("#feedback").text("ERROR: " + e);
+		$("#debug").text("ERROR: " + e);
 	},
 	success: function() {
 		return false;
@@ -41,6 +41,7 @@ $(document).ready(function() {
 	//load the problem
 	$("#intro").html(hack.intro)
 	$("#problem").html(hack.problem)
+	example_editor.setValue(hack.example)
 
     if (hack.code) {
       editor.setValue(hack.code);
