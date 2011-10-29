@@ -41,13 +41,13 @@ class GamesController < ApplicationController
   end
   
   def get_avatar(level)
-    if(level < 5)
+    if(level < 3)
       "1sad.png"
-    elsif level < 10
+    elsif level < 6
       "2fighting.png"
-    elsif level < 15
+    elsif level < 9
       "3bingo.png"
-    elsif level < 20
+    elsif level < 12
       "4happy.png"
     else
       "5cool.png"

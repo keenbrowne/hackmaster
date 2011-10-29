@@ -34,7 +34,7 @@ var hack = {
 }
 
 var debug = function(str) {
-	$("#debug").append($("<p/>").html(str));
+	$("#debug").append($("<p/>").html(""+str));
 }
 
 $(document).ready(function() {
@@ -59,7 +59,6 @@ $(document).ready(function() {
 			var code = editor.getValue();
 			var ret = eval(code);
 			if(typeof ret == "function") {
-	
 				ret = ret();
 			}
 		} catch(e) {
