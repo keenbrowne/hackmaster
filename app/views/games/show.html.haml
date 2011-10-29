@@ -4,11 +4,12 @@
 = javascript_include_tag "engine.js"
 = javascript_include_tag "problem#{@level_id}.js"
 
+%embed{:src => "/MUSIC0909271415097664.mp3", :loop => "false", :autostart => "true", :hidden => "true"}
 #content.game
 	#left
-		#intro
+		#intro{:style=>"font-weight:bold;font-size:18px"}
 		#problem.outline
-		#example.outline
+		#example
 			#example_screen
 		#console
 			#computer_screen
@@ -17,9 +18,9 @@
 			%input#compile.btn.primary.right{:type => "button", :value => "提交"}
 	#right
 		#score
-			=image_tag "hacker.png"
-			#blurb="you are now level #{@level_id}, #{@blurb}"
-		#debug
-			debug
+			#blurb{:style=>"padding-left:5px"}="You are a level #{@level_id} #{@blurb}"
+			#avatar=image_tag @avatar			
+		#debug{:style=>"padding-left:10px"}
+			Output:
 	.clearfix
 #level_id{:style=>"display:none", :level_id => @level_id}

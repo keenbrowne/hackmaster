@@ -1,4 +1,4 @@
-var story_points = [3, 6, 8]
+var story_points = [3, 6, 9, 12, 15]
 
 Array.prototype.compareArrays = function(arr) {
     if (this.length != arr.length) return false;
@@ -17,7 +17,7 @@ var advance = function() {
 	var level_id = parseInt($("#level_id").attr("level_id"))
 	var game_id = story_points.indexOf(level_id)
 	if(game_id >= 0) {
-		url = '/stories/' + (game_id + 1) + "?level_id=" + (level_id + 1)
+		url = '/stories/' + (game_id + 2) + "?level_id=" + (level_id + 1)
 	} else {
 		url = '/games/' + (level_id + 1)
 	}
@@ -58,17 +58,18 @@ $(document).ready(function() {
 		try {
 			var code = editor.getValue();
 			var ret = eval(code);
-			debug("type= " + typeof(ret));
 			if(typeof ret == "function") {
 	
 				ret = ret();
 			}
 		} catch(e) {
 			hack.handleSyntaxError(e);
+			debug(e);			
 		}
 
-		debug("ret=" + ret);
-		debug("log=" + consoleLog);
+		if (consoleLog.length > 0) {
+			debug(consoleLog[0]);
+		}
 
 		if (!hack.success(consoleLog, ret, code)) {
 			$('#feedback').append(

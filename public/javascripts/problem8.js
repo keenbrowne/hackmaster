@@ -8,12 +8,6 @@ $.extend(hack, {
 		if (consoleLog[0] == expected) {			
 			return true;
 		} else {
-			$('#feedback').append(
-				$("<p/>").text("expected " + ret)
-			);
-			$('#feedback').append(
-				$("<p/>").text("actual " + consoleLog)
-			);
 			return false;
 		}
 	}

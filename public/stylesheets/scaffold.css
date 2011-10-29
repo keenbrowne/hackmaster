@@ -17,7 +17,6 @@
 
 #content {
 	width: 960px;
-	background: url("/images/background.jpg");
 }
 
 #left {
@@ -47,7 +46,14 @@
 	height: 400px;
 }
 #score {
-	height: 220px;
+	padding-top:20px;
+	height: 230px;
+	position:relative;
+}
+
+#compile{
+	margin-right:50px;
+	margin-top:10px;	
 }
 
 .outline {
@@ -55,7 +61,14 @@
 }
 
 #content.game {
+	background: url("/images/background.jpg");	
 	background-color: #000;
-	color:green;
+	color:#2c2d2d;
 	font-size:1.2em;
+}
+
+#avatar {
+	position:absolute;
+	left: 40px;
+	top: 70px;
 }

@@ -1,6 +1,6 @@
 = javascript_include_tag "story.js"
 #hidden{:tag => @stories_json}
-
+%embed{:src => "/Love Story.mp3", :loop => "false", :autostart => "true", :hidden => "true"}
 #content
 	%h2="第#{@stories[0].level}章"
 	#left
@@ -8,7 +8,8 @@
 	#right
 		#text
 		#next
-			.right=link_to "开始编程!", "/games/#{@level_id}", :class => "btn primary", :style => "display:none"
+			-unless @level_id == "16"
+				.right=link_to "开始编程!", "/games/#{@level_id}", :class => "btn primary", :style => "display:none;"
 	
 :css
 	.left {
@@ -52,4 +53,16 @@
 	
 	.outline {
 		border: 1px solid red;
+	}
+	
+	#text{
+		height:350px;
+		margin-top:10px;
+		margin-left:10px;
+	}
+	
+	#text p{
+		font-size:18px;
+		line-height:22px;
+		color:black;
 	}
