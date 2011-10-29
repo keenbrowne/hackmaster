@@ -1,0 +1,63 @@
+= javascript_include_tag "engine.js"
+= javascript_include_tag "problem#{@game.level_id}.js"
+
+Game Page
+
+#content
+	#left
+		#problem.outline
+			= @game.problem
+		#console.outline
+			console
+			%textarea
+			.clearfix
+			%input#compile.btn.primary.right{:type => "button", :value => "Compile"}
+		#feedback.outline
+			feedback
+	#right
+		#score.outline
+			score
+	
+	
+:css
+	.left {
+		float:left;
+	}
+	.right {
+		float:right;
+	}
+	textarea {
+		width:80%;
+		height: 220px;
+	}
+
+	#content {
+		width: 960px;
+	}
+	
+	#left {
+		width: 640px;
+		float:left;
+	}
+	#right {
+		width: 320px;
+		float:right;
+	}
+	
+	#problem {
+		height: 300px;
+	}
+	#console {
+		height: 300px;
+	}
+	#feedback {
+		height:200px;
+	}
+	
+	#score {
+		height: 200px;
+	}
+	
+	.outline {
+		border: 1px solid red;
+	}
