@@ -1,3 +1,5 @@
+var story_points = [3, 6, 8]
+
 Array.prototype.compareArrays = function(arr) {
     if (this.length != arr.length) return false;
     for (var i = 0; i < arr.length; i++) {
@@ -10,22 +12,16 @@ Array.prototype.compareArrays = function(arr) {
     return true;
 }
 
-var old_log = console.log;
-
 var advance = function() {
 	// old_log("advancing to next stage")
-	var level_id = $("#level_id").attr("level_id")
-	if(level_id % 5 == 0) {
-		url = '/stories/' + (level_id / 5)
+	var level_id = parseInt($("#level_id").attr("level_id"))
+	var game_id = story_points.indexOf(level_id)
+	if(game_id >= 0) {
+		url = '/stories/' + (game_id + 1) + "?level_id=" + (level_id + 1)
 	} else {
 		url = '/games/' + (level_id + 1)
 	}
-	var url = document.URL;
-	if(url.length > 0){
-		counter = eval(url[url.length - 1]) + 1;
-		url = url.substr(0, url.length-1) + counter;
-		window.location.href = url;
-	}
+	window.location.href = url;
 }
 
 var hack = {
@@ -49,7 +45,7 @@ $(document).ready(function() {
 	var consoleLog = [];
 	var feedback = $('#feedback');
 	
-	console.log = function(str) {
+	log = function(str) {
 		consoleLog.push(str);
 	}
 	

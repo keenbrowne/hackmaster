@@ -1,8 +1,8 @@
 $.extend(hack, {
-	intro: "lets try multiplication",
-	problem: "what is 25 * 67?",
+	intro: "divison time",
+	problem: "what is 9483 / 25",
 	success: function(consoleLog, ret) {
-		expected = 25 * 67;
+		expected = 9483/25;
 		
 		if (consoleLog === expected || ret === expected) {			
 			return true;

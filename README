@@ -1,10 +1,5 @@
 print
 
-addition
-subtraction
-multiplcation
-division
-
 =for loop
 	looping through an array
 	sum
@@ -24,7 +19,6 @@ division
 =string manipulations
 	concat
 	substring
-	length
 	
 =final lesson
 	analyze a file(string) and extract secret
