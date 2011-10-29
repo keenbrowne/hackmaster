@@ -45,7 +45,9 @@ $(document).ready(function() {
 	//load the problem
 	$("#intro").html(hack.intro)
 	$("#problem").html(hack.problem)
-	
+    if (hack.code) {
+      $("#console textarea").val(hack.code);
+    }
 	var consoleLog = [];
 	var feedback = $('#feedback');
 	
@@ -70,7 +72,7 @@ $(document).ready(function() {
 		debug("ret=" + ret);
 		debug("log=" + consoleLog);
 
-		if (!hack.success(consoleLog, ret)) {
+		if (!hack.success(consoleLog, ret, code)) {
 			$('#feedback').append(
 				$("<p/>").text("Try again.")
 			);
