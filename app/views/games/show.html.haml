@@ -1,3 +1,6 @@
+= javascript_include_tag "codemirror2/lib/codemirror.js"
+= javascript_include_tag "codemirror2/mode/javascript/javascript.js"
+= javascript_include_tag "editor.js"
 = javascript_include_tag "engine.js"
 = javascript_include_tag "problem#{@level_id}.js"
 
@@ -5,8 +8,8 @@
 	#left
 		#intro.outline
 		#problem.outline
-		#console
-			%textarea
+		#console.outline
+			%textarea#editor
 			.clearfix
 			%input#compile.btn.primary.right{:type => "button", :value => "Compile"}
 		#feedback

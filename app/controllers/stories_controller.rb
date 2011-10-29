@@ -13,8 +13,14 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.xml
   def show
+    @stories = Story.where("level = :level", :level => params[:id])
     @level_id = params[:level_id]
-#    @story = Story.find(params[:id])
+    @stories_json = @stories.to_json
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @story }
+    end
   end
 
   # GET /stories/new

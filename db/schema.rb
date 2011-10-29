@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(:version => 20111029055241) do
   end
 
   create_table "stories", :force => true do |t|
+    t.string   "image"
+    t.string   "text"
+    t.integer  "level",      :limit => 1
+    t.integer  "order",      :limit => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
