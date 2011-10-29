@@ -43,6 +43,12 @@
 }
 #score {
 	height: 200px;
+	position:relative;
+}
+
+#compile{
+	margin-right:50px;
+	margin-top:10px;
 }
 
 .outline {
@@ -53,4 +59,10 @@
 	background-color: #000;
 	color:green;
 	font-size:1.2em;
+}
+
+#avatar {
+	position:absolute;
+	left: 90px;
+	top: 70px;
 }

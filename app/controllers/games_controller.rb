@@ -16,6 +16,7 @@ class GamesController < ApplicationController
     # @game = Game.find_by_level_id(params[:id])
     @level_id = params[:id]
     @blurb = get_blurb(@level_id.to_i)
+    @avatar = get_avatar(@level_id.to_i)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @game }
@@ -31,6 +32,20 @@ class GamesController < ApplicationController
       "a rockstar ninja codemonkey"
     else
       "a master Hacker!"
+    end
+  end
+  
+  def get_avatar(level)
+    if(level < 5)
+      "1sad.png"
+    elsif level < 10
+      "2fighting.png"
+    elsif level < 15
+      "3bingo.png"
+    elsif level < 20
+      "4happy.png"
+    else
+      "5cool.png"
     end
   end
   # GET /games/new

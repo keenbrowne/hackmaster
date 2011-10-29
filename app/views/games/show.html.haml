@@ -12,13 +12,13 @@
 			#computer_screen
 				%textarea#editor
 			.clearfix
-			%input#compile.btn.primary.right{:type => "button", :value => "Compile"}
+			%input#compile.btn.primary.right{:type => "button", :value => "编译"}
 		#feedback
 			feedback
 	#right
 		#score.outline
-			=image_tag "hacker.png"
 			#blurb="you are now level #{@level_id}, #{@blurb}"
+			#avatar=image_tag @avatar	
 		#debug.outline
 			debug
 	.clearfix

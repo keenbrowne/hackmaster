@@ -14,7 +14,8 @@ class StoriesController < ApplicationController
   # GET /stories/1.xml
   def show
     @stories = Story.where("level = :level", :level => params[:id])
-    @level_id = params[:level_id]
+    @level_id = params[:level_id] 
+    @level_id = 1 unless @level_id
     @stories_json = @stories.to_json
 
     respond_to do |format|
