@@ -1,8 +1,9 @@
 $.extend(hack, {
-	intro: "divison time",
-	problem: "what is 9483 / 25",
+	intro: "4. Adding it all together",
+	problem: "what is (25 + 18) * 30?",
+	example: "(1 + 2) * 3//Order of operations is important, this is 6\n1 + (2 * 3)//Order of operations is important, this is 7",
 	success: function(consoleLog, ret) {
-		expected = 9483/25;
+		expected = (25 + 18) * 30;
 		
 		if (consoleLog === expected || ret === expected) {			
 			return true;

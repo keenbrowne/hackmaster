@@ -1,16 +1,11 @@
 $.extend(hack, {
-	intro: "you can figure out how long your name is by using .length",
-	problem: "what is the length of your name?",
+	intro: "6. Fragments of memory",
+	problem: "What is the first 4 characters of the word 'coolness'?",
+	example: '"abc".substring(0,2)//This gives us "ab"\n//note that we start counting from 0, computers are weird like that',
 	success: function(consoleLog, ret) {		
-		if (typeof(ret) == "number") {			
+		if (ret == "cool") {			
 			return true;
 		} else {
-			$('#feedback').append(
-				$("<p/>").text("expected " + expected)
-			);
-			$('#feedback').append(
-				$("<p/>").text("actual " + consoleLog)
-			);
 			return false;
 		}
 	}

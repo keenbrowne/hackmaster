@@ -1,9 +1,9 @@
 $.extend(hack, {
 	intro: "1. 简单的开始",
-	problem: "30+75等于?",
-	example: "1+1 //2\n3+3 //6",
+	problem: "30+12等于?",
+	example: "//I'm a comment, comments are here to help you through your journey\n1+1 //2\n3+3 //6",
 	success: function(consoleLog, ret) {
-		if (consoleLog === 4 || ret === 4) {
+		if (ret === 42) {
 			return true;
 		} else {
 			return false;
