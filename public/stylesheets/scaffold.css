@@ -4,10 +4,15 @@
 .right {
 	float:right;
 }
-textarea {
+#computer_screen {
 	margin: 95px 0px 0px 75px;
 	width:80%;
 	height: 200px;
+	overflow: hidden;
+}
+
+#editor {
+	border: 1px solid red;
 }
 
 #content {
