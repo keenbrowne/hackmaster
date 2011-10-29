@@ -70,6 +70,9 @@ $(document).ready(function() {
 		if (consoleLog.length > 0) {
 			debug(consoleLog[0]);
 		}
+		if (ret) {
+			debug(ret)
+		}
 
 		if (!hack.success(consoleLog, ret, code)) {
 			$('#feedback').append(
