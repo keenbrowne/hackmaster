@@ -4,6 +4,10 @@
 .right {
 	float:right;
 }
+
+body {
+		padding-bottom:200px;
+}
 #computer_screen {
 	margin: 45px 0px 0px 10px;
 	width:100%;
