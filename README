@@ -1,30 +1,19 @@
-print
 
-addition
-subtraction
-multiplcation
-division
 
 =for loop
-	looping through an array
 	sum
 	find
 	
 =array operations
-	create
-	push
 	pop
-	index
-	length
-	join
 	
 =conditionals
 	
 	
 =string manipulations
+	join
 	concat
 	substring
-	length
 	
 =final lesson
 	analyze a file(string) and extract secret

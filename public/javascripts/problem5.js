@@ -1,10 +1,8 @@
 $.extend(hack, {
-	intro: "lets try multiplication",
-	problem: "what is 25 * 67?",
-	success: function(consoleLog, ret) {
-		expected = 25 * 67;
-		
-		if (consoleLog === expected || ret === expected) {			
+	intro: "strings are useful for showing your name and stuff.",
+	problem: "type your name with quotes",
+	success: function(consoleLog, ret) {		
+		if (typeof(ret) == "string") {			
 			return true;
 		} else {
 			$('#feedback').append(

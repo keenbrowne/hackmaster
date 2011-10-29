@@ -1,14 +1,14 @@
 $.extend(hack, {
-	intro: "lets try multiplication",
-	problem: "what is 25 * 67?",
+	intro: "you can get a part of a string via substring().",
+	problem: "try getting the first 4 characters of coolness",
 	success: function(consoleLog, ret) {
-		expected = 25 * 67;
+		expected = "ness";
 		
-		if (consoleLog === expected || ret === expected) {			
+		if (expected) {			
 			return true;
 		} else {
 			$('#feedback').append(
-				$("<p/>").text("expected " + expected)
+				$("<p/>").text("expected " + ret)
 			);
 			$('#feedback').append(
 				$("<p/>").text("actual " + consoleLog)
