@@ -1,6 +1,6 @@
 var editor;
-window.onload = function() {
+$(document).ready(function() {
     editor = CodeMirror.fromTextArea($("#editor").get(0),{
         lineNumbers: true
     });
-};
+});

@@ -44,3 +44,6 @@ textarea {
 .outline {
 	border: 1px solid red;
 }
+body {
+    overflow: hidden;
+}

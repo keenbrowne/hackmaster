@@ -42,7 +42,7 @@ $(document).ready(function() {
 	$("#intro").html(hack.intro)
 	$("#problem").html(hack.problem)
     if (hack.code) {
-      $("#console textarea").val(hack.code);
+      editor.setValue(hack.code);
     }
 	var consoleLog = [];
 	var feedback = $('#feedback');
@@ -54,7 +54,7 @@ $(document).ready(function() {
 	$("#compile").click(function() {
 		consoleLog = [];
 		try {
-			var code = $("#console textarea").val();
+			var code = editor.getValue();
 			var ret = eval(code);
 			debug("type= " + typeof(ret));
 			if(typeof ret == "function") {
