@@ -15,12 +15,24 @@ class GamesController < ApplicationController
   def show
     # @game = Game.find_by_level_id(params[:id])
     @level_id = params[:id]
+    @blurb = get_blurb(@level_id.to_i)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @game }
     end
   end
 
+  def get_blurb(level)
+    if(level < 5)
+      "noob"
+    elsif level < 10
+      "a coding enthusist"
+    elsif level < 15
+      "a rockstar ninja codemonkey"
+    else
+      "a master Hacker!"
+    end
+  end
   # GET /games/new
   # GET /games/new.xml
   def new

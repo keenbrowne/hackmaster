@@ -1,14 +1,14 @@
 $.extend(hack, {
-	intro: "lets try multiplication",
-	problem: "what is 25 * 67?",
+	intro: "Sometimes you have to make a decision in ife",
+	problem: "you can if() {} else {}",
+	code: "var x = 'not';\nif(x == 'love') {\nconsole.log('keep going');\n} else {\n console.log('pause and think');\n}",
 	success: function(consoleLog, ret) {
-		expected = 25 * 67;
-		
-		if (consoleLog === expected || ret === expected) {			
+		expected = "keep going";
+		if (consoleLog[0] == expected) {			
 			return true;
 		} else {
 			$('#feedback').append(
-				$("<p/>").text("expected " + expected)
+				$("<p/>").text("expected " + ret)
 			);
 			$('#feedback').append(
 				$("<p/>").text("actual " + consoleLog)

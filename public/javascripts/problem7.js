@@ -1,10 +1,10 @@
 $.extend(hack, {
-	intro: "you can get a part of a string via substring().",
-	problem: "try getting the first 4 characters of coolness",
+	intro: "you can add strings just like numbers with + ",
+	problem: "add together the first 4 characters of hacker with the last 5 characters of marathon",
 	success: function(consoleLog, ret) {
-		expected = "ness";
+		expected = "hackathon";
 		
-		if (expected) {			
+		if (expected == ret) {			
 			return true;
 		} else {
 			$('#feedback').append(

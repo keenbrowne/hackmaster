@@ -42,5 +42,11 @@ textarea {
 }
 
 .outline {
-	border: 1px solid red;
+	border: 1px solid white;
+}
+
+#content.game {
+	background-color: #000;
+	color:green;
+	font-size:1.2em;
 }

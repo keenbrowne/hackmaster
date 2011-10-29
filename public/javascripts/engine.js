@@ -41,13 +41,14 @@ $(document).ready(function() {
 	//load the problem
 	$("#intro").html(hack.intro)
 	$("#problem").html(hack.problem)
+
     if (hack.code) {
       $("#console textarea").val(hack.code);
     }
 	var consoleLog = [];
 	var feedback = $('#feedback');
 	
-	log = function(str) {
+	console.log = function(str) {
 		consoleLog.push(str);
 	}
 	

@@ -1,9 +1,7 @@
 = javascript_include_tag "engine.js"
 = javascript_include_tag "problem#{@level_id}.js"
 
-Game Page
-
-#content
+#content.game
 	#left
 		#intro.outline
 		#problem.outline
@@ -16,8 +14,9 @@ Game Page
 			feedback
 	#right
 		#score.outline
-			="you are now level #{@level_id} hacker!"
+			=image_tag "hacker.png"
+			#blurb="you are now level #{@level_id}, #{@blurb}"
 		#debug.outline
 			debug
-
+	.clearfix
 #level_id{:style=>"display:none", :level_id => @level_id}
