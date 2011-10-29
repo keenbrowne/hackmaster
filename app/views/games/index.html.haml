@@ -1,0 +1,19 @@
+.content
+	%div= image_tag "fangfangdegushi.png"
+	%div= image_tag "fangfangren.png", :style => "margin-left:-100px;"
+	= link_to '开始游戏', '/stories/1', :class => "btn primary", :id => "start", :style => "padding-top:20px;width:200px;height:60px;font-size:30px;"
+
+:css
+	.content{
+		margin:0px auto;
+		width:500px;
+		text-align:center;
+	}
+	
+	body{
+		background-color:#D1D2CA;
+	}
+	
+	#start{
+		margin-top:50px;
+	}
