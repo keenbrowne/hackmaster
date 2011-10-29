@@ -5,12 +5,14 @@
 	float:right;
 }
 textarea {
+	margin: 95px 0px 0px 75px;
 	width:80%;
-	height: 220px;
+	height: 200px;
 }
 
 #content {
 	width: 960px;
+	background: url("/images/background.jpg");
 }
 
 #left {
@@ -29,9 +31,6 @@ textarea {
 }
 #console {
 	height: 300px;
-}
-#feedback {
-	height:200px;
 }
 
 #debug {
