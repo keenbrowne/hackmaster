@@ -1,22 +1,17 @@
-print
+
 
 =for loop
-	looping through an array
 	sum
 	find
 	
 =array operations
-	create
-	push
 	pop
-	index
-	length
-	join
 	
 =conditionals
 	
 	
 =string manipulations
+	join
 	concat
 	substring
 	
