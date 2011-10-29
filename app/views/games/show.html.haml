@@ -17,7 +17,10 @@ Game Page
 	#right
 		#score.outline
 			="you are now level #{@game.level_id} hacker!"
-	
+		#debug.outline
+			debug
+
+#level_id{:style=>"display:none", :level_id => @game.level_id}
 	
 :css
 	.left {
@@ -54,6 +57,9 @@ Game Page
 		height:200px;
 	}
 	
+	#debug {
+		height: 400px;
+	}
 	#score {
 		height: 200px;
 	}

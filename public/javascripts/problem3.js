@@ -1,14 +1,8 @@
 $.extend(hack, {
 	success: function(consoleLog, ret) {
-		expected = function() {
-			var output = [];
-			for(var i = 0; i< 100; i++) {
-				output.push(i);
-			}
-			return output;
-		}();
+		expected = 4
 		
-		if (consoleLog.compareArrays(expected)) {
+		if (consoleLog === expected || ret === expected) {			
 			return true;
 		} else {
 			$('#feedback').append(
@@ -17,7 +11,6 @@ $.extend(hack, {
 			$('#feedback').append(
 				$("<p/>").text("actual " + consoleLog)
 			);
-			
 			return false;
 		}
 	}
