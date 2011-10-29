@@ -1,0 +1,53 @@
+= javascript_include_tag "story.js"
+#hidden{:tag => @stories_json}
+#content
+	#left
+		= image_tag @stories[0].image, :class => "outline", :width => "640px", :id => "image"
+	#right
+		#text.outline
+		#next
+			%input.btn.primary.right{:type => "button", :value => "Go on", :style => "display:none"}
+	
+:css
+	.left {
+		float:left;
+	}
+	.right {
+		float:right;
+	}
+	textarea {
+		width:80%;
+		height: 220px;
+	}
+
+	#content {
+		width: 960px;
+		margin: 0px auto;
+	}
+	
+	#left {
+		width: 640px;
+		float:left;
+	}
+	#right {
+		width: 320px;
+		float:right;
+	}
+	
+	#problem {
+		height: 300px;
+	}
+	#console {
+		height: 300px;
+	}
+	#feedback {
+		height:200px;
+	}
+	
+	#score {
+		height: 200px;
+	}
+	
+	.outline {
+		border: 1px solid red;
+	}
