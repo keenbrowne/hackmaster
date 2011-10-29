@@ -27,7 +27,7 @@ var toNextAction = function(){
 			next_text_step = 0;
 			next_step ++;
 		}
-		setTimeout(toNextAction, next_text_step==0 ? 4000 : 2000);
+		setTimeout(toNextAction, next_text_step==0 ? 6000 : 3000);
 	}
 }
 
