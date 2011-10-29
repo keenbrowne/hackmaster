@@ -4,8 +4,12 @@ $.extend(hack, {
 	success: function(consoleLog, ret) {
         var expected = ["smile", "beautiful face", "sense of humor"],
             equal = true;
-        $(ret).each(function(index, value) {
-            if (expected[index] != value) {
+        
+        if (expected.length != ret.length)
+            return false;
+        
+        $(expected).each(function(index, value) {
+            if (ret[index] != value) {
                 equal = false;
                 return false;
             }
@@ -15,10 +19,3 @@ $.extend(hack, {
 	}
 });
 
-
-create
-push
-pop
-index
-length
-join
