@@ -7,20 +7,20 @@
 %embed{:src => "/coding1.mp3", :loop => "false", :autostart => "true", :hidden => "true"}
 #content.game
 	#left
-		#intro.outline
+		#intro{:style=>"font-weight:bold;font-size:18px"}
 		#problem.outline
-		#example.outline
+		#example
 			#example_screen
-		#console.outline
+		#console
 			#computer_screen
 				%textarea#editor
 			.clearfix
 			%input#compile.btn.primary.right{:type => "button", :value => "提交"}
 	#right
-		#score.outline
-			#blurb="you are now level #{@level_id}, #{@blurb}"
-			#avatar=image_tag @avatar	
-		#debug.outline
-			debug
+		#score
+			#blurb{:style=>"padding-left:5px"}="You are a level #{@level_id} #{@blurb}"
+			#avatar=image_tag @avatar			
+		#debug{:style=>"padding-left:10px"}
+			Output:
 	.clearfix
 #level_id{:style=>"display:none", :level_id => @level_id}

@@ -14,7 +14,10 @@ class GamesController < ApplicationController
   # GET /games/1.xml
   def show
     # @game = Game.find_by_level_id(params[:id])
-    @level_id = params[:id]
+    @level_id = params[:id] ? params[:id].to_i : 1
+    if @level_id > 15
+      @level_id = 15
+    end
     @blurb = get_blurb(@level_id.to_i)
     @avatar = get_avatar(@level_id.to_i)
     respond_to do |format|
@@ -24,14 +27,16 @@ class GamesController < ApplicationController
   end
 
   def get_blurb(level)
-    if(level < 5)
+    if(level < 3)
       "noob"
-    elsif level < 10
-      "a coding enthusist"
-    elsif level < 15
-      "a rockstar ninja codemonkey"
+    elsif level < 6
+      "coding monkey"
+    elsif level < 9
+      "senior engineer"
+    elsif level < 12
+      "rockstar ninja"
     else
-      "a master Hacker!"
+      "Master Hacker!"
     end
   end
   

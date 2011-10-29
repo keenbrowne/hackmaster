@@ -1,10 +1,11 @@
 $.extend(hack, {
-    intro: "But FangFang also likes her eyes. In javascript you can call a function named 'push' to add items to the array like ['my', 'array'].push('new value');",
+    intro: "12. For your eyes only",
     problem: "Can you add eyes to the array?",
-    code: '["smile", "beautiful face", "sense of humor"]',
+	example: "//just type it in",
+    code: '["smile", "lips", "hair"]',
 	success: function(consoleLog, ret) {
         // the push method returns the length of the array
-        return (ret == 4);
+        return (ret == 4 || (typeof(ret)=="object" && ret.length == 4));
 	}
 });
 

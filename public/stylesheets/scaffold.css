@@ -17,7 +17,6 @@
 
 #content {
 	width: 960px;
-	background: url("/images/background.jpg");
 }
 
 #left {
@@ -47,7 +46,8 @@
 	height: 400px;
 }
 #score {
-	height: 200px;
+	padding-top:20px;
+	height: 230px;
 	position:relative;
 }
 
@@ -61,8 +61,9 @@
 }
 
 #content.game {
+	background: url("/images/background.jpg");	
 	background-color: #000;
-	color:green;
+	color:#2c2d2d;
 	font-size:1.2em;
 }
 

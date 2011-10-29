@@ -1,16 +1,10 @@
 $.extend(hack, {
-	intro: "Looping through",
-	problem: "print 1 through 100",
+	intro: "9. 说出你的感受",
+	problem: "print out 'Hello World'",
+	example: "console.log('hi')//prints 'hi",
 	success: function(consoleLog, ret) {
-		expected = function() {
-			var output = [];
-			for(var i = 1; i<= 100; i++) {
-				output.push(i);
-			}
-			return output;
-		}();
-		
-		if (consoleLog.compareArrays(expected)) {
+
+		if (consoleLog[0].toLowerCase() === "hello world") {
 			return true;
 		} else {
 			return false;
