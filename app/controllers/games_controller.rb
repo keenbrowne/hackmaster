@@ -13,7 +13,8 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.xml
   def show
-    @game = Game.find_by_level_id(params[:id])
+    # @game = Game.find_by_level_id(params[:id])
+    @level_id = params[:id]
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @game }

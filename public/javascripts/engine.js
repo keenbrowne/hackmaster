@@ -15,8 +15,8 @@ var old_log = console.log;
 var advance = function() {
 	// old_log("advancing to next stage")
 	var level_id = $("#level_id").attr("level_id")
-	if(level_id % 5) {
-		url = '/stories/' + (level / 5)
+	if(level_id % 5 == 0) {
+		url = '/stories/' + (level_id / 5)
 	} else {
 		url = '/games/' + (level_id + 1)
 	}
@@ -42,6 +42,10 @@ var debug = function(str) {
 }
 
 $(document).ready(function() {
+	//load the problem
+	$("#intro").html(hack.intro)
+	$("#problem").html(hack.problem)
+	
 	var consoleLog = [];
 	var feedback = $('#feedback');
 	

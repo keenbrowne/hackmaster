@@ -1,12 +1,12 @@
 = javascript_include_tag "engine.js"
-= javascript_include_tag "problem#{@game.level_id}.js"
+= javascript_include_tag "problem#{@level_id}.js"
 
 Game Page
 
 #content
 	#left
+		#intro.outline
 		#problem.outline
-			= @game.problem
 		#console.outline
 			console
 			%textarea
@@ -16,11 +16,11 @@ Game Page
 			feedback
 	#right
 		#score.outline
-			="you are now level #{@game.level_id} hacker!"
+			="you are now level #{@level_id} hacker!"
 		#debug.outline
 			debug
 
-#level_id{:style=>"display:none", :level_id => @game.level_id}
+#level_id{:style=>"display:none", :level_id => @level_id}
 	
 :css
 	.left {
@@ -46,9 +46,11 @@ Game Page
 		width: 320px;
 		float:right;
 	}
-	
+	#intro {
+		height: 100px;
+	}
 	#problem {
-		height: 300px;
+		height: 100px;
 	}
 	#console {
 		height: 300px;

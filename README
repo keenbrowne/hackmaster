@@ -6,7 +6,10 @@ multiplcation
 division
 
 =for loop
-
+	looping through an array
+	sum
+	find
+	
 =array operations
 	create
 	push
@@ -16,7 +19,8 @@ division
 	join
 	
 =conditionals
-
+	
+	
 =string manipulations
 	concat
 	substring
