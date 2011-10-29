@@ -6,20 +6,20 @@
 
 #content.game
 	#left
-		#intro.outline
+		#intro
 		#problem.outline
 		#example.outline
 			#example_screen
-		#console.outline
+		#console
 			#computer_screen
 				%textarea#editor
 			.clearfix
 			%input#compile.btn.primary.right{:type => "button", :value => "提交"}
 	#right
-		#score.outline
+		#score
 			=image_tag "hacker.png"
 			#blurb="you are now level #{@level_id}, #{@blurb}"
-		#debug.outline
+		#debug
 			debug
 	.clearfix
 #level_id{:style=>"display:none", :level_id => @level_id}

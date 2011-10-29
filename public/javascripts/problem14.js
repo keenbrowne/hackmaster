@@ -1,7 +1,8 @@
 $.extend(hack, {
-    intro: "You can get the number of items in an array by referencing the length property like. [].length",
-    problem: "How many things does FangFang like about YuanYuan",
-    code: '["smile", "beautiful face", "sense of humor", "eyes"]',
+    intro: "14. Count your blessings",
+    problem: "You can count the number of items in an array with .length - How many things does FangFang like about YuanYuan",
+	example: "[1, 10, 100].length //3",
+    code: '["smile", "lips", "hair", "eyes"]',
 	success: function(consoleLog, ret) {
         // the push method returns the length of the array
         return (ret == 4);

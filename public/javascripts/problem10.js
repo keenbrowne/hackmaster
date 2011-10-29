@@ -1,18 +1,19 @@
 $.extend(hack, {
-	intro: "lets try multiplication",
-	problem: "what is 25 * 67?",
+	intro: "10. Milestone",
+	problem: "print 1 through 100",
+	example: "for(var i = 1; i <= 10; i++) {\nconsole.log('hello')\n}//This prints hello 10 times",
 	success: function(consoleLog, ret) {
-		expected = 25 * 67;
+		expected = function() {
+			var output = [];
+			for(var i = 1; i<= 100; i++) {
+				output.push(i);
+			}
+			return output;
+		}();
 		
-		if (consoleLog === expected || ret === expected) {			
+		if (consoleLog.compareArrays(expected)) {
 			return true;
 		} else {
-			$('#feedback').append(
-				$("<p/>").text("expected " + expected)
-			);
-			$('#feedback').append(
-				$("<p/>").text("actual " + consoleLog)
-			);
 			return false;
 		}
 	}

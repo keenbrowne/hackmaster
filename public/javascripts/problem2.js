@@ -6,12 +6,6 @@ $.extend(hack, {
 		if (typeof(ret) == "string") {			
 			return true;
 		} else {
-			$('#feedback').append(
-				$("<p/>").text("expected " + expected)
-			);
-			$('#feedback').append(
-				$("<p/>").text("actual " + consoleLog)
-			);
 			return false;
 		}
 	}
