@@ -82,15 +82,11 @@ $(document).ready(function() {
 		}
 
 		if (!hack.success(consoleLog, ret, code)) {
-			$('#feedback').append(
-				$("<p/>").text("Try again.")
-			);
+			debug("You are close, but the answer is a bit off, try again");
 			consoleLog = null;
 		} else {
-			$('#feedback').append(
-				$("<p/>").text("Success.")
-			);
-			
+			debug("胜利 - Victory!!");
+						
 			smoke.signal("You got it! Onto the next problem!", 2250);
 			setTimeout(advance, 2250);
 			
