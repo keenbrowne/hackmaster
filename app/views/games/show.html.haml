@@ -19,7 +19,13 @@
 	#right
 		#score
 			#blurb{:style=>"padding-left:5px"}="You are a level #{@level_id} #{@blurb}"
-			#avatar=image_tag @avatar			
+			#avatar=image_tag @avatar
+		.clearfix	
+		#equipments{:style=>"padding-left:10px"}
+			Items
+			#man_page.tipsy_thing=link_to "Mythril Man Page", "#", :title => "Trusty handbook that sometimes give you hints"
+			#keyboard.tipsy_thing=link_to "DvorakonScale Keyboard", "#", :title => "Magical Keyboard that sometimes type out a part of the answer for you"
+		.clearfix
 		#debug{:style=>"padding-left:10px"}
 			Output:
 	.clearfix

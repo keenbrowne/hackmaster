@@ -47,6 +47,29 @@ var debug = function(str) {
 }
 
 $(document).ready(function() {
+	
+	//
+	var level_id = parseInt($("#level_id").attr("level_id"))
+	if (level_id < 3) {
+		$("#man_page").hide();
+	} else {
+		$("#man_page").click(function(e) {
+			e.preventDefault();
+			smoke.alert("Think more, code less", 1000)
+		});
+	}
+	if (level_id < 6) {
+		$("#keyboard").hide();
+	} else {
+		$("#keyboard").click(function(e) {
+			e.preventDefault();
+			smoke.alert('This problem is so hard even I dont know what to do, says the keyboard');
+		});
+	}
+	
+	//tipsy
+	$(".tipsy_thing a").tipsy();
+	
 	//load the problem
 	$("#intro").html(hack.intro)
 	$("#problem").html(hack.problem)

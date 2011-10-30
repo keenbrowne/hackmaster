@@ -38,6 +38,11 @@ body {
 	text-align:center;
 	color:black;
 }
+
+.tipsy_thing {
+	text-align:right;
+}
+
 #problem {
 	height: 90px;
 	margin:10px;
@@ -47,6 +52,9 @@ body {
 	height:90px;
 }
 
+#equipments {
+	height:100px;
+}
 #debug {
 	height: 400px;
 }
