@@ -1,4 +1,4 @@
-var story_points = [3, 6, 9, 12, 15]
+var story_points = [3, 6, 8, 12, 15]
 
 Array.prototype.compareArrays = function(arr) {
     if (this.length != arr.length) return false;

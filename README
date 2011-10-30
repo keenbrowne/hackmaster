@@ -1,8 +1,18 @@
-Read online code editor example
-go through each question
+Hack Master - A story about love
 
+A project for TechCrunch Disrupt Hackathon Beijing
 
---
-3 more movies
-kaifu movies
-move stuff around
+===
+
+Build instructions
+
+git clone git@github.com:tstyle/hackmaster.git
+bundle install
+rake db:migrate
+rake db:seed
+rails server
+===
+
+Playable Demo at : hackathon.jihua.fm
+
+===
