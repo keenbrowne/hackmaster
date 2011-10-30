@@ -15,9 +15,10 @@ class GamesController < ApplicationController
   def show
     # @game = Game.find_by_level_id(params[:id])
     @level_id = params[:id] ? params[:id].to_i : 1
-    if @level_id > 15
+    if @level_id > 15 && @level_id != 42
       @level_id = 15
     end
+
     @blurb = get_blurb(@level_id.to_i)
     @avatar = get_avatar(@level_id.to_i)
     respond_to do |format|

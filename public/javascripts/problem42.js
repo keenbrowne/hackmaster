@@ -1,7 +1,8 @@
 $.extend(hack, {
-    intro: "You can do more on each step of a for loop.  For example, you can combine the function, for loop and if statement to determine if FangFang was invited to the party.",
-    problem: "Loop over the guest list.  Use an if test to determine if FangFang is invited to the party.  If he his invited return the string invited.",
+    intro: "42. ???",
+    problem: "Hack your way into the party.  Use an if test to determine if FangFang is invited to the party.  If he his invited return the string invited.",
     code: 'function invited(guestlist) {\n}',
+	example: '//you are on your own',
 	success: function(consoleLog, ret, code) {
         eval(code);
         if (invited(["Wangran"])) {
