@@ -24,9 +24,18 @@ var advance = function() {
 	window.location.href = url;
 }
 
+
+var feedback_msg = 0
 var hack = {
 	handleSyntaxError: function(e) {
-		$("#debug").text("ERROR: " + e);
+		var r = feedback_msg++ % 3;
+		if(r == 0 ) {
+			debug("There is something wrong with your code. Try to figure it out.");
+		} else if (r == 1) {
+			debug("You can do it. here's the error: " + e);
+		} else {
+			debug("send some money to jihua@paypal.com, and we'll help you figure it out!")
+		}
 	},
 	success: function() {
 		return false;
@@ -63,7 +72,6 @@ $(document).ready(function() {
 			}
 		} catch(e) {
 			hack.handleSyntaxError(e);
-			debug(e);			
 		}
 
 		if (consoleLog.length > 0) {
